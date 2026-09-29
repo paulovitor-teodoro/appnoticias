@@ -100,6 +100,30 @@ class HomePage extends StatelessWidget {
               }).toList(),
             ),
           ),
+          Expanded(
+            child: ListView.builder(
+              padding: const EdgeInsets.all(12),
+              itemCount: noticias.length,
+              itemBuilder: (context, index) {
+                final noticia = noticias[index];
+
+                return Card(
+                  margin: EdgeInsets.only(bottom: 12),
+                  elevation: 0,
+                  child: Column(
+                    children: [
+                      Container(
+                        width: double.infinity,
+                        height: 120,
+                        color: const Color(0xFFE4E9Ef),
+                        child:const Icon(Icons.image_outlined),
+                      )
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
